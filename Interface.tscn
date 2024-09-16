@@ -1,0 +1,990 @@
+[gd_scene load_steps=32 format=3 uid="uid://dn831r1vdumpd"]
+
+[ext_resource type="Script" path="res://Interface.gd" id="1_box2u"]
+[ext_resource type="Script" path="res://order.gd" id="2_wbkvy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bdfie"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_j34y2"]
+line_spacing = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_fgxli"]
+font_size = 20
+shadow_size = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_m1vi3"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_lokxs"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_304ns"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_kl8mt"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_hvo11"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_kdned"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_4kumf"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_6yseq"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_ri88l"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_24rdv"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_h46xw"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_rwkwe"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_0nxnc"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_7g1f6"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_qhjxj"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_kf8xt"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_thg2a"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_rvujl"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_wpmj1"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_rfbgj"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_b33qc"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_5twfh"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_x1i2p"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_3qi0s"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_tu3tp"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_38uxv"]
+font_size = 20
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_right = -4.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+script = ExtResource("1_box2u")
+
+[node name="GameName" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_right = 280.0
+offset_bottom = 60.0
+size_flags_vertical = 3
+
+[node name="GameName" type="Label" parent="GameName"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+text = "Phasmophobia"
+label_settings = SubResource("LabelSettings_bdfie")
+
+[node name="ver" type="Label" parent="GameName/GameName"]
+layout_mode = 2
+offset_left = -59.0
+offset_top = 23.0
+offset_right = 225.0
+offset_bottom = 47.0
+size_flags_horizontal = 4
+text = "All Maps Prof., evidence%, ver0.10"
+label_settings = SubResource("LabelSettings_j34y2")
+
+[node name="ver_edit" type="LineEdit" parent="GameName/GameName"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -65.0
+offset_top = 20.0
+offset_right = 71.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "Enter the title of category here"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 49.0
+offset_right = 280.0
+offset_bottom = 288.0
+follow_focus = true
+scroll_vertical_custom_step = 233.114
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="Splits" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Split1" type="Label" parent="ScrollContainer/Splits"]
+light_mask = 512
+layout_mode = 2
+text = "Sunny Meadows"
+label_settings = SubResource("LabelSettings_fgxli")
+
+[node name="Time" type="Label" parent="ScrollContainer/Splits/Split1"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -71.0
+offset_top = -30.0
+offset_right = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_m1vi3")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Order" type="HBoxContainer" parent="ScrollContainer/Splits/Split1"]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -57.0
+offset_top = -31.0
+offset_right = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("2_wbkvy")
+
+[node name="Decrease" type="Button" parent="ScrollContainer/Splits/Split1/Order"]
+layout_mode = 2
+text = "<"
+
+[node name="Number" type="Label" parent="ScrollContainer/Splits/Split1/Order"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "0"
+label_settings = SubResource("LabelSettings_lokxs")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Increase" type="Button" parent="ScrollContainer/Splits/Split1/Order"]
+layout_mode = 2
+text = ">"
+
+[node name="Split2" type="Label" parent="ScrollContainer/Splits"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "SUNNSINN"
+label_settings = SubResource("LabelSettings_304ns")
+
+[node name="Time" type="Label" parent="ScrollContainer/Splits/Split2"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -71.0
+offset_top = -30.0
+offset_right = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_kl8mt")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Order" type="HBoxContainer" parent="ScrollContainer/Splits/Split2"]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -57.0
+offset_top = -31.0
+offset_right = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("2_wbkvy")
+
+[node name="Decrease" type="Button" parent="ScrollContainer/Splits/Split2/Order"]
+layout_mode = 2
+text = "<"
+
+[node name="Number" type="Label" parent="ScrollContainer/Splits/Split2/Order"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "0"
+label_settings = SubResource("LabelSettings_lokxs")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Increase" type="Button" parent="ScrollContainer/Splits/Split2/Order"]
+layout_mode = 2
+text = ">"
+
+[node name="Split3" type="Label" parent="ScrollContainer/Splits"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "564546564"
+label_settings = SubResource("LabelSettings_hvo11")
+
+[node name="Time" type="Label" parent="ScrollContainer/Splits/Split3"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -71.0
+offset_top = -30.0
+offset_right = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_kdned")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Order" type="HBoxContainer" parent="ScrollContainer/Splits/Split3"]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -57.0
+offset_top = -31.0
+offset_right = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("2_wbkvy")
+
+[node name="Decrease" type="Button" parent="ScrollContainer/Splits/Split3/Order"]
+layout_mode = 2
+text = "<"
+
+[node name="Number" type="Label" parent="ScrollContainer/Splits/Split3/Order"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "0"
+label_settings = SubResource("LabelSettings_lokxs")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Increase" type="Button" parent="ScrollContainer/Splits/Split3/Order"]
+layout_mode = 2
+text = ">"
+
+[node name="Split4" type="Label" parent="ScrollContainer/Splits"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "5232352532"
+label_settings = SubResource("LabelSettings_4kumf")
+
+[node name="Time" type="Label" parent="ScrollContainer/Splits/Split4"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -71.0
+offset_top = -30.0
+offset_right = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_6yseq")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Order" type="HBoxContainer" parent="ScrollContainer/Splits/Split4"]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -57.0
+offset_top = -31.0
+offset_right = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("2_wbkvy")
+
+[node name="Decrease" type="Button" parent="ScrollContainer/Splits/Split4/Order"]
+layout_mode = 2
+text = "<"
+
+[node name="Number" type="Label" parent="ScrollContainer/Splits/Split4/Order"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "0"
+label_settings = SubResource("LabelSettings_lokxs")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Increase" type="Button" parent="ScrollContainer/Splits/Split4/Order"]
+layout_mode = 2
+text = ">"
+
+[node name="Split5" type="Label" parent="ScrollContainer/Splits"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "235235253"
+label_settings = SubResource("LabelSettings_ri88l")
+
+[node name="Time" type="Label" parent="ScrollContainer/Splits/Split5"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -71.0
+offset_top = -30.0
+offset_right = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_24rdv")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Order" type="HBoxContainer" parent="ScrollContainer/Splits/Split5"]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -57.0
+offset_top = -31.0
+offset_right = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("2_wbkvy")
+
+[node name="Decrease" type="Button" parent="ScrollContainer/Splits/Split5/Order"]
+layout_mode = 2
+text = "<"
+
+[node name="Number" type="Label" parent="ScrollContainer/Splits/Split5/Order"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "0"
+label_settings = SubResource("LabelSettings_lokxs")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Increase" type="Button" parent="ScrollContainer/Splits/Split5/Order"]
+layout_mode = 2
+text = ">"
+
+[node name="Split6" type="Label" parent="ScrollContainer/Splits"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "235235523532"
+label_settings = SubResource("LabelSettings_h46xw")
+
+[node name="Time" type="Label" parent="ScrollContainer/Splits/Split6"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -71.0
+offset_top = -30.0
+offset_right = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_rwkwe")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Order" type="HBoxContainer" parent="ScrollContainer/Splits/Split6"]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -57.0
+offset_top = -31.0
+offset_right = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("2_wbkvy")
+
+[node name="Decrease" type="Button" parent="ScrollContainer/Splits/Split6/Order"]
+layout_mode = 2
+text = "<"
+
+[node name="Number" type="Label" parent="ScrollContainer/Splits/Split6/Order"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "0"
+label_settings = SubResource("LabelSettings_lokxs")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Increase" type="Button" parent="ScrollContainer/Splits/Split6/Order"]
+layout_mode = 2
+text = ">"
+
+[node name="Split7" type="Label" parent="ScrollContainer/Splits"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 6
+text = "253235253"
+label_settings = SubResource("LabelSettings_0nxnc")
+
+[node name="Time" type="Label" parent="ScrollContainer/Splits/Split7"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -71.0
+offset_top = -30.0
+offset_right = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_7g1f6")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Order" type="HBoxContainer" parent="ScrollContainer/Splits/Split7"]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -57.0
+offset_top = -31.0
+offset_right = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("2_wbkvy")
+
+[node name="Decrease" type="Button" parent="ScrollContainer/Splits/Split7/Order"]
+layout_mode = 2
+text = "<"
+
+[node name="Number" type="Label" parent="ScrollContainer/Splits/Split7/Order"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "0"
+label_settings = SubResource("LabelSettings_lokxs")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Increase" type="Button" parent="ScrollContainer/Splits/Split7/Order"]
+layout_mode = 2
+text = ">"
+
+[node name="Split8" type="Label" parent="ScrollContainer/Splits"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 6
+text = "235532532532"
+label_settings = SubResource("LabelSettings_qhjxj")
+
+[node name="Time" type="Label" parent="ScrollContainer/Splits/Split8"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -71.0
+offset_top = -30.0
+offset_right = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_kf8xt")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Order" type="HBoxContainer" parent="ScrollContainer/Splits/Split8"]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -57.0
+offset_top = -31.0
+offset_right = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("2_wbkvy")
+
+[node name="Decrease" type="Button" parent="ScrollContainer/Splits/Split8/Order"]
+layout_mode = 2
+text = "<"
+
+[node name="Number" type="Label" parent="ScrollContainer/Splits/Split8/Order"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "0"
+label_settings = SubResource("LabelSettings_lokxs")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Increase" type="Button" parent="ScrollContainer/Splits/Split8/Order"]
+layout_mode = 2
+text = ">"
+
+[node name="Split9" type="Label" parent="ScrollContainer/Splits"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 6
+text = "235235235523"
+label_settings = SubResource("LabelSettings_thg2a")
+
+[node name="Time" type="Label" parent="ScrollContainer/Splits/Split9"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -71.0
+offset_top = -30.0
+offset_right = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_rvujl")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Order" type="HBoxContainer" parent="ScrollContainer/Splits/Split9"]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -57.0
+offset_top = -31.0
+offset_right = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("2_wbkvy")
+
+[node name="Decrease" type="Button" parent="ScrollContainer/Splits/Split9/Order"]
+layout_mode = 2
+text = "<"
+
+[node name="Number" type="Label" parent="ScrollContainer/Splits/Split9/Order"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "0"
+label_settings = SubResource("LabelSettings_lokxs")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Increase" type="Button" parent="ScrollContainer/Splits/Split9/Order"]
+layout_mode = 2
+text = ">"
+
+[node name="Split10" type="Label" parent="ScrollContainer/Splits"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 6
+text = "235235235"
+label_settings = SubResource("LabelSettings_wpmj1")
+
+[node name="Time" type="Label" parent="ScrollContainer/Splits/Split10"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -71.0
+offset_top = -30.0
+offset_right = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_rfbgj")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Order" type="HBoxContainer" parent="ScrollContainer/Splits/Split10"]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -57.0
+offset_top = -31.0
+offset_right = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("2_wbkvy")
+
+[node name="Decrease" type="Button" parent="ScrollContainer/Splits/Split10/Order"]
+layout_mode = 2
+text = "<"
+
+[node name="Number" type="Label" parent="ScrollContainer/Splits/Split10/Order"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "0"
+label_settings = SubResource("LabelSettings_lokxs")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Increase" type="Button" parent="ScrollContainer/Splits/Split10/Order"]
+layout_mode = 2
+text = ">"
+
+[node name="Split11" type="Label" parent="ScrollContainer/Splits"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 6
+text = "253235235253"
+label_settings = SubResource("LabelSettings_b33qc")
+
+[node name="Time" type="Label" parent="ScrollContainer/Splits/Split11"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -71.0
+offset_top = -30.0
+offset_right = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_5twfh")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Order" type="HBoxContainer" parent="ScrollContainer/Splits/Split11"]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -57.0
+offset_top = -31.0
+offset_right = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("2_wbkvy")
+
+[node name="Decrease" type="Button" parent="ScrollContainer/Splits/Split11/Order"]
+layout_mode = 2
+text = "<"
+
+[node name="Number" type="Label" parent="ScrollContainer/Splits/Split11/Order"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "0"
+label_settings = SubResource("LabelSettings_lokxs")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Increase" type="Button" parent="ScrollContainer/Splits/Split11/Order"]
+layout_mode = 2
+text = ">"
+
+[node name="Split12" type="Label" parent="ScrollContainer/Splits"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 6
+text = "235235235235235"
+label_settings = SubResource("LabelSettings_x1i2p")
+
+[node name="Time" type="Label" parent="ScrollContainer/Splits/Split12"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -71.0
+offset_top = -30.0
+offset_right = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_3qi0s")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Order" type="HBoxContainer" parent="ScrollContainer/Splits/Split12"]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -57.0
+offset_top = -31.0
+offset_right = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("2_wbkvy")
+
+[node name="Decrease" type="Button" parent="ScrollContainer/Splits/Split12/Order"]
+layout_mode = 2
+text = "<"
+
+[node name="Number" type="Label" parent="ScrollContainer/Splits/Split12/Order"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "0"
+label_settings = SubResource("LabelSettings_lokxs")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Increase" type="Button" parent="ScrollContainer/Splits/Split12/Order"]
+layout_mode = 2
+text = ">"
+
+[node name="SumOfBest" type="VBoxContainer" parent="."]
+visible = false
+layout_direction = 3
+layout_mode = 0
+offset_top = 300.0
+offset_right = 280.0
+offset_bottom = 330.0
+
+[node name="SumOfBest" type="Label" parent="SumOfBest"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Sum of best:"
+
+[node name="Timer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_top = 330.0
+offset_right = 280.0
+offset_bottom = 380.0
+
+[node name="Time" type="Label" parent="Timer"]
+layout_mode = 2
+text = "0:00"
+label_settings = SubResource("LabelSettings_tu3tp")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="EditSplits" type="HBoxContainer" parent="Timer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="OK" type="Button" parent="Timer/EditSplits"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "OK"
+
+[node name="Cancel" type="Button" parent="Timer/EditSplits"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Cancel"
+
+[node name="Save_diag" type="FileDialog" parent="."]
+initial_position = 2
+size = Vector2i(500, 250)
+access = 2
+
+[node name="Load_diag" type="FileDialog" parent="."]
+title = "Open a File"
+initial_position = 2
+size = Vector2i(500, 250)
+ok_button_text = "Open"
+file_mode = 0
+access = 2
+
+[node name="Options" type="Popup" parent="."]
+position = Vector2i(56, 122)
+size = Vector2i(171, 241)
+visible = true
+always_on_top = true
+
+[node name="Options" type="VBoxContainer" parent="Options"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Add_split" type="Button" parent="Options/Options"]
+visible = false
+layout_mode = 2
+text = "Add split"
+
+[node name="Edit_title" type="Button" parent="Options/Options"]
+layout_mode = 2
+text = "Edit category"
+
+[node name="Edit_order" type="Button" parent="Options/Options"]
+layout_mode = 2
+text = "Change splits order"
+
+[node name="Save" type="Button" parent="Options/Options"]
+layout_mode = 2
+text = "Save"
+
+[node name="Load" type="Button" parent="Options/Options"]
+layout_mode = 2
+text = "Load"
+
+[node name="Randomize" type="Button" parent="Options/Options"]
+layout_mode = 2
+text = "Randomize the order"
+
+[node name="Exit" type="Button" parent="Options/Options"]
+layout_mode = 2
+text = "Quit"
+
+[node name="Run_ended" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -101.0
+offset_top = -78.0
+offset_right = 101.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Message" type="Label" parent="Run_ended"]
+layout_mode = 2
+text = "Do you wanna save splits?"
+label_settings = SubResource("LabelSettings_38uxv")
+
+[node name="Yesno" type="HBoxContainer" parent="Run_ended"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Yes" type="Button" parent="Run_ended/Yesno"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "YES"
+
+[node name="No" type="Button" parent="Run_ended/Yesno"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "NO"
+
+[connection signal="mouse_entered" from="GameName" to="." method="_on_game_name_mouse_entered"]
+[connection signal="mouse_exited" from="GameName" to="." method="_on_game_name_mouse_exited"]
+[connection signal="focus_exited" from="GameName/GameName/ver_edit" to="." method="_on_ver_edit_focus_exited"]
+[connection signal="text_submitted" from="GameName/GameName/ver_edit" to="." method="_on_ver_edit_text_submitted"]
+[connection signal="pressed" from="ScrollContainer/Splits/Split1/Order/Decrease" to="ScrollContainer/Splits/Split1/Order" method="_on_decrease_pressed"]
+[connection signal="pressed" from="ScrollContainer/Splits/Split1/Order/Increase" to="ScrollContainer/Splits/Split1/Order" method="_on_increase_pressed"]
+[connection signal="pressed" from="ScrollContainer/Splits/Split2/Order/Decrease" to="ScrollContainer/Splits/Split2/Order" method="_on_decrease_pressed"]
+[connection signal="pressed" from="ScrollContainer/Splits/Split2/Order/Increase" to="ScrollContainer/Splits/Split2/Order" method="_on_increase_pressed"]
+[connection signal="pressed" from="ScrollContainer/Splits/Split3/Order/Decrease" to="ScrollContainer/Splits/Split3/Order" method="_on_decrease_pressed"]
+[connection signal="pressed" from="ScrollContainer/Splits/Split3/Order/Increase" to="ScrollContainer/Splits/Split3/Order" method="_on_increase_pressed"]
+[connection signal="pressed" from="ScrollContainer/Splits/Split4/Order/Decrease" to="ScrollContainer/Splits/Split4/Order" method="_on_decrease_pressed"]
+[connection signal="pressed" from="ScrollContainer/Splits/Split4/Order/Increase" to="ScrollContainer/Splits/Split4/Order" method="_on_increase_pressed"]
+[connection signal="pressed" from="ScrollContainer/Splits/Split5/Order/Decrease" to="ScrollContainer/Splits/Split5/Order" method="_on_decrease_pressed"]
+[connection signal="pressed" from="ScrollContainer/Splits/Split5/Order/Increase" to="ScrollContainer/Splits/Split5/Order" method="_on_increase_pressed"]
+[connection signal="pressed" from="ScrollContainer/Splits/Split6/Order/Decrease" to="ScrollContainer/Splits/Split6/Order" method="_on_decrease_pressed"]
+[connection signal="pressed" from="ScrollContainer/Splits/Split6/Order/Increase" to="ScrollContainer/Splits/Split6/Order" method="_on_increase_pressed"]
+[connection signal="pressed" from="ScrollContainer/Splits/Split7/Order/Decrease" to="ScrollContainer/Splits/Split7/Order" method="_on_decrease_pressed"]
+[connection signal="pressed" from="ScrollContainer/Splits/Split7/Order/Increase" to="ScrollContainer/Splits/Split7/Order" method="_on_increase_pressed"]
+[connection signal="pressed" from="ScrollContainer/Splits/Split8/Order/Decrease" to="ScrollContainer/Splits/Split8/Order" method="_on_decrease_pressed"]
+[connection signal="pressed" from="ScrollContainer/Splits/Split8/Order/Increase" to="ScrollContainer/Splits/Split8/Order" method="_on_increase_pressed"]
+[connection signal="pressed" from="ScrollContainer/Splits/Split9/Order/Decrease" to="ScrollContainer/Splits/Split9/Order" method="_on_decrease_pressed"]
+[connection signal="pressed" from="ScrollContainer/Splits/Split9/Order/Increase" to="ScrollContainer/Splits/Split9/Order" method="_on_increase_pressed"]
+[connection signal="pressed" from="ScrollContainer/Splits/Split10/Order/Decrease" to="ScrollContainer/Splits/Split10/Order" method="_on_decrease_pressed"]
+[connection signal="pressed" from="ScrollContainer/Splits/Split10/Order/Increase" to="ScrollContainer/Splits/Split10/Order" method="_on_increase_pressed"]
+[connection signal="pressed" from="ScrollContainer/Splits/Split11/Order/Decrease" to="ScrollContainer/Splits/Split11/Order" method="_on_decrease_pressed"]
+[connection signal="pressed" from="ScrollContainer/Splits/Split11/Order/Increase" to="ScrollContainer/Splits/Split11/Order" method="_on_increase_pressed"]
+[connection signal="pressed" from="ScrollContainer/Splits/Split12/Order/Decrease" to="ScrollContainer/Splits/Split12/Order" method="_on_decrease_pressed"]
+[connection signal="pressed" from="ScrollContainer/Splits/Split12/Order/Increase" to="ScrollContainer/Splits/Split12/Order" method="_on_increase_pressed"]
+[connection signal="pressed" from="Timer/EditSplits/OK" to="." method="_on_ok_pressed"]
+[connection signal="pressed" from="Timer/EditSplits/Cancel" to="." method="_on_cancel_pressed"]
+[connection signal="confirmed" from="Save_diag" to="." method="_on_save_diag_confirmed"]
+[connection signal="file_selected" from="Save_diag" to="." method="_on_options_file_selected"]
+[connection signal="file_selected" from="Load_diag" to="." method="_on_load_diag_file_selected"]
+[connection signal="pressed" from="Options/Options/Add_split" to="." method="_on_add_split_pressed"]
+[connection signal="pressed" from="Options/Options/Edit_title" to="." method="_on_edit_title_pressed"]
+[connection signal="pressed" from="Options/Options/Edit_order" to="." method="_on_edit_order_pressed"]
+[connection signal="pressed" from="Options/Options/Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="Options/Options/Load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="Options/Options/Randomize" to="." method="_on_clear_pressed"]
+[connection signal="pressed" from="Options/Options/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Run_ended/Yesno/Yes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="Run_ended/Yesno/No" to="." method="_on_no_pressed"]
